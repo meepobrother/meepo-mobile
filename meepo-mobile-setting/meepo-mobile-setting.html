@@ -1,0 +1,6 @@
+<div class="setting-row">
+    <ul class="meepo-design-setting-nav" *ngIf="_props.fathersProps">
+        <li (click)="setItemProps(item)" [style.order]="1000-i" *ngFor="let item of _props.fathersProps;index as i;">{{item.title}}></li>
+    </ul>
+</div>
+<ng-container *ngComponent="[_props.settingProps];instance: props.instance"></ng-container>
